@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs | Ferdinand & Winniechris</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    h1, h2, h3 {
+      font-family: 'Great Vibes', cursive;
+      color: #5e2129;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff8f2;
+      color: #5e2129;
+    }
+    .bg-primary {
+      background-color: #fdf2ec;
+    }
+    .text-primary {
+      color: #5e2129;
+    }
+    .btn-primary {
+      background-color: #b85763;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #9b3f4d;
+    }
+    .content-font {
+        font-family: 'Cinzel', serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .transition-max-height {
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+    .faq-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .rotate {
+      transition: transform 0.3s ease;
+    }
+    .rotate.open {
+      transform: rotate(180deg);
+    }
+    html {
+    overflow-y: scroll;
+    }
+
+  </style>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body class="pt-16 bg-primary text-primary">
+
+  <header class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl text-primary">F&W Wedding</h1>
+      <div class="md:hidden">
+        <button id="menu-button" class="text-primary focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <nav class="hidden md:flex space-x-4 text-sm sm:text-base font-medium">
+        <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+        <a href="details.html" class="text-gray-700 hover:text-primary">Wedding Details</a>
+        <a href="entourage.html" class="text-gray-700 hover:text-primary">Entourage</a>
+        <a href="faqs.html" class="text-primary font-semibold">FAQs</a>
+        <a href="gallery.html" class="text-gray-700 hover:text-primary">Gallery</a>
+        <a href="rsvp.php" class="text-gray-700 hover:text-primary">RSVP</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 font-medium text-sm sm:text-base">
+      <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+      <a href="details.html" class="block py-2 text-gray-700 hover:text-primary">Wedding Details</a>
+      <a href="entourage.html" class="block py-2 text-gray-700 hover:text-primary">Entourage</a>
+      <a href="faqs.html" class="block py-2 text-primary font-semibold">FAQs</a>
+      <a href="gallery.html" class="block py-2 text-gray-700 hover:text-primary">Gallery</a>
+      <a href="rsvp.php" class="block py-2 text-gray-700 hover:text-primary">RSVP</a>
+    </div>
+  </header>
+
+  <section class="max-w-3xl mx-auto px-4 py-20 text-center">
+    <h2 class="text-4xl content-font text-primary mb-10">Frequently Asked Questions</h2>
+
+    <div class="space-y-4 text-left">
+      <div class="border border-gray-200 rounded-lg p-4 bg-white shadow-sm">
+        <button class="faq-toggle w-full flex justify-between items-center font-medium text-lg text-primary focus:outline-none content-font">
+          What time should I arrive at the ceremony?
+          <span class="rotate transition-transform">&#9660;</span>
+        </button>
+        <div class="faq-content transition-max-height mt-2 text-primary">
+          Please arrive at least 15–30 minutes before the ceremony starts at 3:00 PM.
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-lg p-4 bg-white shadow-sm">
+        <button class="faq-toggle w-full flex justify-between items-center font-medium text-lg text-primary focus:outline-none content-font">
+          Can I bring a plus-one?
+          <span class="rotate transition-transform">&#9660;</span>
+        </button>
+        <div class="faq-content transition-max-height mt-2 text-primary">
+          Due to limited seating, only guests listed on the invitation are invited. Thank you for understanding!
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-lg p-4 bg-white shadow-sm">
+        <button class="faq-toggle w-full flex justify-between items-center font-medium text-lg text-primary focus:outline-none content-font">
+          Is there parking available at the venue?
+          <span class="rotate transition-transform">&#9660;</span>
+        </button>
+        <div class="faq-content transition-max-height mt-2 text-primary">
+          Yes, parking is available at both the ceremony and reception venues. Our coordinators will assist upon arrival.
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-lg p-4 bg-white shadow-sm">
+        <button class="faq-toggle w-full flex justify-between items-center font-medium text-lg text-primary focus:outline-none content-font">
+          What should I wear?
+          <span class="rotate transition-transform">&#9660;</span>
+        </button>
+        <div class="faq-content transition-max-height mt-2 text-primary">
+          Kindly refer to our attire guide on the Wedding Details page. Smart casual or semi-formal in soft neutrals is ideal.
+        </div>
+      </div>
+
+      <div class="border border-gray-200 rounded-lg p-4 bg-white shadow-sm">
+        <button class="faq-toggle w-full flex justify-between items-center font-medium text-lg text-primary focus:outline-none content-font">
+          Will the ceremony and reception be indoors or outdoors?
+          <span class="rotate transition-transform">&#9660;</span>
+        </button>
+        <div class="faq-content transition-max-height mt-2 text-primary">
+          The ceremony will be inside San Rafael Church. The reception will be held at an open-air garden venue.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-primary text-center py-6">
+    <p class="text-primary content-font">&copy; 2025 Ferdinand & Winniechris | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const toggles = document.querySelectorAll('.faq-toggle');
+    toggles.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.rotate');
+        content.classList.toggle('open');
+        icon.classList.toggle('open');
+      });
+    });
+
+    const menuBtn = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

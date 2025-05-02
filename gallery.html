@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Ferdinand & Winniechris</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    h1, h2, h3 {
+      font-family: 'Great Vibes', cursive;
+      color: #5e2129;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff8f2;
+      color: #5e2129;
+    }
+    .bg-primary {
+      background-color: #fdf2ec;
+    }
+    .text-primary {
+      color: #5e2129;
+    }
+    .content-font {
+        font-family: 'Cinzel', serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+  <style>
+    html {
+      overflow-y: scroll;
+    }
+  </style>
+  
+</head>
+<body class="pt-16">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl">F&W Wedding</h1>
+      <div class="md:hidden">
+        <button id="menu-button" class="text-primary focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <nav class="hidden md:flex space-x-4 text-sm sm:text-base font-medium">
+        <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+        <a href="details.html" class="text-gray-700 hover:text-primary">Wedding Details</a>
+        <a href="entourage.html" class="text-gray-700 hover:text-primary">Entourage</a>
+        <a href="faqs.html" class="text-gray-700 hover:text-primary">FAQs</a>
+        <a href="gallery.html" class="text-primary font-semibold">Gallery</a>
+        <a href="rsvp.php" class="text-gray-700 hover:text-primary">RSVP</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 font-medium text-sm sm:text-base">
+      <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+      <a href="details.html" class="block py-2 text-gray-700 hover:text-primary">Wedding Details</a>
+      <a href="entourage.html" class="block py-2 text-gray-700 hover:text-primary">Entourage</a>
+      <a href="faqs.html" class="block py-2 text-gray-700 hover:text-primary">FAQs</a>
+      <a href="gallery.html" class="block py-2 text-primary font-semibold">Gallery</a>
+      <a href="rsvp.php" class="block py-2 text-gray-700 hover:text-primary">RSVP</a>
+    </div>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="bg-primary py-20 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl sm:text-5xl mb-12">Pre-Nup Gallery</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="galleryphotos/Screenshot (1).png" alt="Pre-nup 1" class="rounded-lg shadow-md">
+        <img src="galleryphotos/Screenshot (2).png" alt="Pre-nup 2" class="rounded-lg shadow-md">
+        <img src="galleryphotos/Screenshot (3).png" alt="Pre-nup 3" class="rounded-lg shadow-md">
+        <img src="galleryphotos/Screenshot (4).png" alt="Pre-nup 4" class="rounded-lg shadow-md">
+        <img src="galleryphotos/Screenshot (5).png" alt="Pre-nup 5" class="rounded-lg shadow-md">
+        <img src="galleryphotos/Screenshot (6).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
+        <img src="galleryphotos/Screenshot (7).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
+        <img src="galleryphotos/Screenshot (8).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
+        <img src="galleryphotos/Screenshot (9).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
+        <img src="galleryphotos/Screenshot (10).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Spotify Mini Player -->
+<div class="fixed bottom-4 right-4 z-50">
+    <iframe style="border-radius:12px"
+      src="https://open.spotify.com/embed/playlist/4yi9WyUNv9l4KXkHiGzqGD?utm_source=generator"
+      width="300"
+      height="80"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+  </div>  
+
+  <!-- Footer -->
+  <footer class="bg-primary text-center py-6">
+    <p class="text-primary content-font">&copy; 2025 Ferdinand & Winniechris | All Rights Reserved</p>
+  </footer>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
