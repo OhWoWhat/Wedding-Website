@@ -71,23 +71,31 @@
   </header>
 
   <!-- Gallery Section -->
-  <section class="bg-primary py-20 px-4">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl sm:text-5xl mb-12">Pre-Nup Gallery</h2>
+  <section class="relative bg-primary py-20 px-4 overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="images/palettebg3.png" alt="Gallery Background" class="w-full h-full object-cover" />
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-white opacity-70"></div>
+    </div>
+  
+    <!-- White container for gallery -->
+    <div class="relative max-w-7xl mx-auto bg-white bg-opacity-90 rounded-1xl shadow-xl p-5 z-10">
+      <h2 class="text-5xl mb-12 text-center text-primary" style="font-family: 'Great Vibes', cursive;">
+        <br>Pre-Nup Gallery
+      </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <img src="galleryphotos/Screenshot (1).png" alt="Pre-nup 1" class="rounded-lg shadow-md">
-        <img src="galleryphotos/Screenshot (2).png" alt="Pre-nup 2" class="rounded-lg shadow-md">
-        <img src="galleryphotos/Screenshot (3).png" alt="Pre-nup 3" class="rounded-lg shadow-md">
-        <img src="galleryphotos/Screenshot (4).png" alt="Pre-nup 4" class="rounded-lg shadow-md">
-        <img src="galleryphotos/Screenshot (5).png" alt="Pre-nup 5" class="rounded-lg shadow-md">
-        <img src="galleryphotos/Screenshot (6).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
-        <img src="galleryphotos/Screenshot (7).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
-        <img src="galleryphotos/Screenshot (8).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
-        <img src="galleryphotos/Screenshot (9).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
-        <img src="galleryphotos/Screenshot (10).png" alt="Pre-nup 6" class="rounded-lg shadow-md">
+        <img src="galleryphotos/placeholder1.jpg" alt="Pre-nup 1" class="rounded-lg shadow-md">
+        <img src="galleryphotos/placeholder2.jpg" alt="Pre-nup 2" class="rounded-lg shadow-md">
+        <img src="galleryphotos/placeholder3.jpg" alt="Pre-nup 3" class="rounded-lg shadow-md">
+        <img src="galleryphotos/placeholder4.jpg" alt="Pre-nup 4" class="rounded-lg shadow-md">
+        <img src="galleryphotos/placeholder5.jpg" alt="Pre-nup 5" class="rounded-lg shadow-md">
+        <img src="galleryphotos/placeholder6.jpg" alt="Pre-nup 6" class="rounded-lg shadow-md">
+        <img src="galleryphotos/placeholder7.jpg" alt="Pre-nup 7" class="rounded-lg shadow-md">
+        <img src="galleryphotos/placeholder8.jpg" alt="Pre-nup 8" class="rounded-lg shadow-md">
       </div>
     </div>
-  </section>
+  </section>  
 
   <!-- Floating Spotify Mini Player -->
 <div class="fixed bottom-4 right-4 z-50">
