@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RSVP | Ferdinand and Winniechris</title>
-  
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
 
@@ -84,7 +84,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     .btn-primary:hover {
       background-color: #9b3f4d;
     }
+    .rsvp-background {
+      background: url('images/palettebg1.png') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .rsvp-overlay {
+      position: relative;
+      z-index: 10; /* Make sure it's above the white overlay */
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(2px);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .rsvp-background::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.60); /* White transparent overlay */
+      z-index: 1;
+    }
+
   </style>
+
   <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
@@ -123,8 +152,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </header>
 
 <!-- RSVP Form Section -->
-<section class="min-h-screen flex items-center justify-center bg-primary py-12 px-6">
-  <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8">
+<section class="rsvp-background flex items-center justify-center py-12 px-6">
+  <div class="rsvp-overlay max-w-2xl w-full">
     <div class="text-center mb-6">
       <h2 class="text-4xl mb-2">RSVP</h2>
       <p class="text-lg text-primary">Please let us know if you can celebrate with us!</p>
@@ -169,13 +198,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script>
   const menuBtn = document.getElementById('menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
-
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
   });
 </script>
 
-<!-- Success Modal Script & Animation -->
+<!-- Success Modal Script -->
 <?php if (!empty($success)): ?>
 <style>
 @keyframes fade-in {
