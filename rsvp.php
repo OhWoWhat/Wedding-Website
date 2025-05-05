@@ -1,5 +1,5 @@
 <?php
-// --- PHP Logic ---
+// --- Database Connection ---
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -35,6 +35,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
       $success = "Thank you for your RSVP!";
+
+      // --- Send Notification Email via Brevo API ---
+      $emailData = [
+        'sender' => ['name' => 'Wedding RSVP Notifier', 'email' => 'verifiedsample@sample.com'], // Replace with verified sender
+        'to' => [
+          ['email' => 'samplemail@sample.com'], // Replace with reciever email
+        ],
+        'subject' => 'New Wedding RSVP from ' . htmlspecialchars($name),
+        'htmlContent' => "
+          <h3>New RSVP Received</h3>
+          <p><strong>Name:</strong> {$name}</p>
+          <p><strong>Email:</strong> {$email}</p>
+          <p><strong>Attendance:</strong> {$attendance}</p>
+          <p><strong>Message:</strong> {$message}</p>
+        "
+      ];
+
+      $curl = curl_init();
+      curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.brevo.com/v3/smtp/email",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => json_encode($emailData),
+        CURLOPT_HTTPHEADER => [
+          "accept: application/json",
+          "api-key: samplekey", // Replace with your Brevo API Key
+          "content-type: application/json"
+        ],
+      ]);
+
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
+      curl_close($curl);
+
+      if ($err) {
+        error_log("Brevo cURL Error: " . $err);
+      }
+
     } else {
       $error = "Error: " . $stmt->error;
     }
