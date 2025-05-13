@@ -24,18 +24,15 @@
       color: #5e2129;
     }
     .content-font {
-        font-family: 'Cinzel', serif;
+      font-family: 'Cinzel', serif;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-  </style>
-  <style>
     html {
       overflow-y: scroll;
     }
   </style>
-  
 </head>
 <body class="pt-16">
 
@@ -78,27 +75,30 @@
       <!-- Overlay -->
       <div class="absolute inset-0 bg-white opacity-70"></div>
     </div>
-  
+
     <!-- White container for gallery -->
     <div class="relative max-w-7xl mx-auto bg-white bg-opacity-90 rounded-1xl shadow-xl p-5 z-10">
       <h2 class="text-5xl mb-12 text-center text-primary" style="font-family: 'Great Vibes', cursive;">
         <br>Pre-Nup Gallery
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <img src="galleryphotos/placeholder1.jpg" alt="Pre-nup 1" class="rounded-lg shadow-md">
-        <img src="galleryphotos/placeholder2.jpg" alt="Pre-nup 2" class="rounded-lg shadow-md">
-        <img src="galleryphotos/placeholder3.jpg" alt="Pre-nup 3" class="rounded-lg shadow-md">
-        <img src="galleryphotos/placeholder4.jpg" alt="Pre-nup 4" class="rounded-lg shadow-md">
-        <img src="galleryphotos/placeholder5.jpg" alt="Pre-nup 5" class="rounded-lg shadow-md">
-        <img src="galleryphotos/placeholder6.jpg" alt="Pre-nup 6" class="rounded-lg shadow-md">
-        <img src="galleryphotos/placeholder7.jpg" alt="Pre-nup 7" class="rounded-lg shadow-md">
-        <img src="galleryphotos/placeholder8.jpg" alt="Pre-nup 8" class="rounded-lg shadow-md">
+        <!-- Auto-generated gallery images -->
+        <script>
+          const galleryContainer = document.currentScript.parentElement;
+          for (let i = 1; i <= 48; i++) {
+            const img = document.createElement('img');
+            img.src = `galleryphotos/prenup (${i}).jpg`;
+            img.alt = `Pre-nup ${i}`;
+            img.className = 'rounded-lg shadow-md';
+            galleryContainer.appendChild(img);
+          }
+        </script>
       </div>
     </div>
-  </section>  
+  </section>
 
   <!-- Floating Spotify Mini Player -->
-<div class="fixed bottom-4 right-4 z-50">
+  <div class="fixed bottom-4 right-4 z-50">
     <iframe style="border-radius:12px"
       src="https://open.spotify.com/embed/playlist/4yi9WyUNv9l4KXkHiGzqGD?utm_source=generator"
       width="300"
@@ -106,7 +106,7 @@
       frameborder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"></iframe>
-  </div>  
+  </div>
 
   <!-- Footer -->
   <footer class="bg-primary text-center py-6">
