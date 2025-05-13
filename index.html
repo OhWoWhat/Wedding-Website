@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Wedding | Ferdinand and Winniechris</title>
@@ -37,11 +38,14 @@
     .btn-primary:hover {
       background-color: #9b3f4d;
     }
+    html, body {
+  scroll-behavior: smooth;
+  }
   </style>
   <link rel="icon" href="images/favicon.png" type="image/png">
 
 </head>
-<body class="pt-16">
+<body class="pt-16 scroll-smooth">
 
   <!-- Header -->
   <header class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
@@ -75,7 +79,7 @@
     </div>
   </header>
   <script>
-    const videoId = "F0lowv3DyfI"; // Replace with your actual YouTube video ID
+    const videoId = "fS8M3vnmO3s"; // Replace with your actual YouTube video ID
   
     function openVideoModal() {
       const iframe = document.getElementById('youtubePlayer');
@@ -97,7 +101,7 @@
     <div class="absolute top-0 left-0 w-full h-full z-0 overflow-hidden pointer-events-none">
       <iframe
         class="w-full h-full absolute top-0 left-0 object-cover"
-        src="https://www.youtube.com/embed/F0lowv3DyfI?autoplay=1&mute=1&controls=0&loop=1&playlist=F0lowv3DyfI&modestbranding=1&showinfo=0&rel=0"
+        src="https://www.youtube.com/embed/fS8M3vnmO3s?autoplay=1&mute=1&controls=0&loop=1&playlist=fS8M3vnmO3s&modestbranding=1&showinfo=0&rel=0"
         title="YouTube background video"
         frameborder="0"
         allow="autoplay; fullscreen"
@@ -129,14 +133,38 @@
   </section>
 
   <!-- Love Story Section -->
-  <section class="bg-primary py-16" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h3 class="text-3xl mb-4 text-primary" data-aos="fade-in">Our Love Story</h3>
-      <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-        [Story...]
-      </p>
+<section class="relative bg-primary py-20 px-6 overflow-hidden" data-aos="fade-up">
+  <!-- Decorative Flowers Background -->
+  <div class="absolute inset-0 opacity-10 bg-cover bg-center" style="background-image: url('images/flower_bg2.jpg');"></div>
+
+  <div class="relative max-w-4xl mx-auto text-center">
+    <h3 class="text-4xl md:text-5xl text-primary mb-6 font-serif" data-aos="fade-in">Our Love Story</h3>
+
+    <!-- Divider -->
+    <div class="flex justify-center mb-8">
+      <div class="w-24 h-1 bg-pink-400 rounded-full"></div>
     </div>
-  </section>
+
+    <p class="text-lg md:text-xl leading-relaxed text-primary bg-white bg-opacity-80 rounded-lg p-6 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+      Our story began back in <strong>3rd year high school</strong> — two young souls brought together at just the right time. What started as a simple friendship slowly blossomed into something more, guided by shared values, mutual respect, and a connection we couldn’t ignore.
+      <br><br>
+      We officially became a couple in college, and from that moment, our journey truly began.
+      <br><br>
+      Through the highs and lows, the milestones and quiet moments, we’ve grown together for over <strong>11 beautiful years</strong> — building a strong foundation filled with laughter, understanding, learning, loving, and grounded in <strong>faith</strong>.
+      <br><br>
+      <em>God has always been at the center of our story.</em> His guidance, grace, and presence have been our steady foundation, helping us navigate life’s seasons with hope, patience, and love.
+      <br><br>
+      We believe it’s by His plan that our paths crossed — and by His love that we continue to grow stronger each day.
+      <br><br>
+      Now, after more than a decade of love, we’re ready to take the next step in our journey — saying <strong>“yes” to forever</strong>.
+      <br><br>
+      We are overjoyed to celebrate not just our love, but the faith that brought us here. And we’re so excited to share this moment with all the family and friends who have supported us along the way.<br>
+      <br><img src="images/og-thumbnail.png" alt="Placeholder" class="rounded-lg shadow-md">
+    </p>
+  </div>
+  
+</section>
+
 
 <!-- Spotify Mini Player -->
 <section class="max-w-3xl mx-auto px-4 py-12">
@@ -158,13 +186,12 @@
     <div class="max-w-6xl mx-auto text-center">
       <h3 class="text-3xl text-primary mb-10">Memories Together</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <img src="images/image1.jpg" alt="Memory 1" class="rounded-lg shadow-lg object-cover w-full h-64">
-        <img src="images/image2.jpg" alt="Memory 2" class="rounded-lg shadow-lg object-cover w-full h-64">
-        <img src="images/image3.jpg" alt="Memory 3" class="rounded-lg shadow-lg object-cover w-full h-64">
-        <img src="images/image4.jpg" alt="Memory 4" class="rounded-lg shadow-lg object-cover w-full h-64">
-        <img src="images/image5.jpg" alt="Memory 5" class="rounded-lg shadow-lg object-cover w-full h-64">
-        <img src="images/flower_bg.jpg" alt="Memory 6" class="rounded-lg shadow-lg object-cover w-full h-64">
-        <img src="images/flower_bg2.jpg" alt="Memory 7" class="rounded-lg shadow-lg object-cover w-full h-64">
+        <img src="images/mt1.jpg" alt="Memories 1" class="rounded-lg shadow-md">
+        <img src="images/mt2.jpg" alt="Memories 2" class="rounded-lg shadow-md">
+        <img src="images/mt3.jpg" alt="Memories 3" class="rounded-lg shadow-md">
+        <img src="images/mt4.jpg" alt="Memories 4" class="rounded-lg shadow-md">
+        <img src="images/mt5.jpg" alt="Memories 5" class="rounded-lg shadow-md">
+        <img src="images/mt6.jpg" alt="Memories 6" class="rounded-lg shadow-md">
       </div>
     </div>
   </section>
@@ -205,10 +232,15 @@
     setInterval(countdown, 1000);
   </script>
 
-  <!-- Back to top button -->
-  <a href="#" class="fixed bottom-4 right-4 btn-primary rounded-full p-3 shadow-lg transition duration-300">
-    ↑
-  </a>
+  <!-- Scroll to RSVP button -->
+  <button 
+  id="rsvpButton"
+  onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });"
+  class="fixed bottom-4 right-4 btn-primary rounded-full px-6 py-3 z-50 flex items-center gap-2 transition duration-300 hover:scale-105"
+>
+  Submit RSVP
+</button>
+
 
   <!-- Mobile Menu Script -->
   <script>
@@ -249,6 +281,27 @@
         </div>
       </div>
     </div>
-
+    <script>
+      const rsvpSection = document.getElementById('rsvp');
+      const rsvpButton = document.getElementById('rsvpButton');
+    
+      function checkRSVPVisibility() {
+        const rsvpRect = rsvpSection.getBoundingClientRect();
+        const isInView = (
+          rsvpRect.top < window.innerHeight &&
+          rsvpRect.bottom >= 0
+        );
+    
+        if (isInView) {
+          rsvpButton.classList.add('hidden');
+        } else {
+          rsvpButton.classList.remove('hidden');
+        }
+      }
+    
+      window.addEventListener('scroll', checkRSVPVisibility);
+      window.addEventListener('load', checkRSVPVisibility);
+    </script>
+    
 </body>
 </html>
